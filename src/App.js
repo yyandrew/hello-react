@@ -6,34 +6,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: [
-        {
-          "id":1,
-          "name":"Foo",
-          "age":"20"
-        },
-        {
-          "id":2,
-          "name":"Bar",
-          "age":"30"
-        },
-        {
-          "id":3,
-          "name":"Baz",
-          "age":"40"
-        }
-      ]
+      header: "Header from state...",
+      content: "Content from stats...",
     }
   }
   render() {
     return (
       <div>
-        <Header />
-        <table>
-          <tbody>
-            { this.state.data.map((person, i) => <TableRow key={i} data={person} />) }
-          </tbody>
-        </table>
+        <h1>{this.state.header}</h1>
+        <h2>{this.state.content}</h2>
       </div>
     );
   }
