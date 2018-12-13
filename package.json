@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.11.2",
+    "babel-plugin-import": "^1.11.0",
     "classnames": "^2.2.5",
+    "dva": "^2.4.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.1.0",
