@@ -1,6 +1,9 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import logger from 'redux-logger';
+import reducers from './reducers';
+
 const store = createStore(
-  () => console.log('add reducer here'),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  reducers,
+  applyMiddleware(logger)
 )
 export default store
