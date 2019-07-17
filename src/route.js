@@ -6,6 +6,7 @@ import FormComponent from './form/FormComponent';
 
 import Todo from './todo/todo';
 import Item from './item/item';
+import Hook from './hook/hook';
 
 // Form is high order component(HOC) wrapper function
 const Form = FormContainer(FormComponent)
@@ -21,6 +22,7 @@ const AppRouter = () => (
         <Route path='/form' component={Form} />
         <Route path='/todo' component={Todo} />
         <Route path='/item' component={Item} />
+        <Route path='/hook' component={Hook} />
       </div>
     </Router>
   </div>
