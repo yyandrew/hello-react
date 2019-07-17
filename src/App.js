@@ -26,7 +26,7 @@ App.propTypes = {
 }
 App.defaultProps = {
   name: "Get start with ReactJS",
-  propArray: [1, 2, 3, 4, 5],
+  propArray: [1, 2, 3, 4, 5, 6],
   propBool: false,
   propFunc: function(e) {
     return e;

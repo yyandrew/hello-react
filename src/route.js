@@ -7,11 +7,10 @@ import FormComponent from './form/FormComponent';
 import Todo from './todo/todo';
 import Item from './item/item';
 import Hook from './hook/hook';
+import About from './about/about';
 
 // Form is high order component(HOC) wrapper function
 const Form = FormContainer(FormComponent)
-
-const About = () => <h2>About</h2>
 
 const AppRouter = () => (
   <div>

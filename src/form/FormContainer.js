@@ -8,11 +8,11 @@ const FormContainer = FormComponent => {
         text: ''
       }
     }
-    onTextChanged = (event) => {
+    onTextChanged(event) {
       this.setState({ text: event.target.value })
     }
 
-    onFormSubmit = (event) => {
+    onFormSubmit(event) {
       event.preventDefault()
       alert(this.state.text)
     }

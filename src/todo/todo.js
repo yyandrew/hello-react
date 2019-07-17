@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { add_todo, remove_todo } from './actions';
@@ -11,7 +12,7 @@ class Todo extends React.Component {
     }
   }
 
-  handleChange = (event) => {
+  handleChange(event) {
     event.preventDefault()
     event.stopPropagation()
     this.setState({
@@ -31,9 +32,9 @@ class Todo extends React.Component {
         <button onClick={() => this.props.dispatch(add_todo(this.state.userInput))}>Add</button>
         <ul>
           {this.props.todos &&
-            this.props.todos.map(todo => {
+            this.props.todos.map((todo, idx) => {
               return (
-                <li
+                <li key={idx}
                   onClick={() => {
                     let todoIndex = this.props.todos.findIndex(k => k === todo)
                     return this.props.dispatch(remove_todo(todoIndex))
@@ -48,8 +49,13 @@ class Todo extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    todos: state.todos
+    todos: state.todos,
   }
+}
+
+Todo.propTypes = {
+  todos: PropTypes.array,
+  dispatch: PropTypes.func,
 }
 
 export default connect(mapStateToProps, null)(Todo);
